@@ -108,14 +108,11 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <a href="#" className="inline-flex items-center">
               <div className="flex items-center">
-                <div className="rounded-md border border-white mr-2" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <img
-                    src="/logo/logo.png"
-                    alt="SMHD Interiors"
-                    className="h-8 sm:h-10 w-auto"
-                    style={{display: 'block'}}
-                  />
-                </div>
+                <img
+                  src="/logo/logo.png"
+                  alt="SMHD Interiors"
+                  className="h-10 sm:h-12 w-auto mr-2"
+                />
                 <span className="text-white font-semibold text-lg sm:text-xl">SMHD<span className="text-[#C46B43]">INTERIOR</span></span>
               </div>
             </a>
