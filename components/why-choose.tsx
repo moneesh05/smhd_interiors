@@ -16,15 +16,27 @@ export default function WhyChoose() {
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-center text-2xl sm:text-3xl font-serif font-semibold text-[#2E2B28] mb-8">Why Choose SMHD Interiors?</h2>
 
-        <div className="flex items-center justify-between gap-4 md:grid md:grid-cols-4">
-          {features.map((f) => (
-            <div key={f.id} className="flex flex-col items-center flex-1 min-w-0 text-center">
-              <div className="bg-gray-100 rounded-full p-3 sm:p-6 flex items-center justify-center w-14 h-14 sm:w-28 sm:h-28 shadow-sm">
-                <f.icon className="w-6 h-6 sm:w-10 sm:h-10 text-[#C46B43]" />
+        <div className="grid grid-cols-2 gap-x-4 gap-y-0 max-w-3xl mx-auto">
+          <div className="space-y-8">
+            {features.slice(0, 2).map((f) => (
+              <div key={f.id} className="flex flex-col items-center">
+                <div className="bg-gray-100 rounded-full p-6 w-24 h-24 flex items-center justify-center shadow-sm">
+                  <f.icon className="w-9 h-9 text-[#C46B43]" />
+                </div>
+                <div className="mt-3 text-sm text-[#2E2B28] leading-tight text-center">{f.title}</div>
               </div>
-              <div className="mt-2 sm:mt-4 text-xs sm:text-sm text-[#2E2B28] truncate">{f.title}</div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="space-y-8">
+            {features.slice(2, 4).map((f) => (
+              <div key={f.id} className="flex flex-col items-center">
+                <div className="bg-gray-100 rounded-full p-6 w-24 h-24 flex items-center justify-center shadow-sm">
+                  <f.icon className="w-9 h-9 text-[#C46B43]" />
+                </div>
+                <div className="mt-3 text-sm text-[#2E2B28] leading-tight text-center">{f.title}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex justify-center mt-8">

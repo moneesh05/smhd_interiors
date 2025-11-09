@@ -154,6 +154,12 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 1.125rem; /* Increased base font size for Aptos */
+  }
+
+  /* Exclude headings from the increased font size */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: revert;
   }
 
   /* Responsive text sizing */

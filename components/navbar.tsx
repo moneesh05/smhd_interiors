@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion"
 import { ConsultationForm } from "./consultation-form"
 
-// Create type-safe motion components
-const MotionNav = motion.nav
-const MotionDiv = motion.div
-const MotionLink = motion.a
+// Create motion components (loose-typed to avoid strict Motion prop typings interfering with className/html props)
+const MotionNav: any = motion.nav
+const MotionDiv: any = motion.div
+const MotionLink: any = motion.a
 
 type NavLink = {
   href: string
@@ -20,7 +20,7 @@ const navLinks: NavLink[] = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
   // Portfolio should jump to the Living Room interiors carousel
-  { href: "#kitchen", label: "Portfolio" },
+  { href: "#living", label: "Portfolio" },
   { href: "#about", label: "About" },
   // Contact now navigates to the footer where contact details live
   { href: "#footer", label: "Contact" },

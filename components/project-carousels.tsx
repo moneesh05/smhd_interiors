@@ -167,10 +167,7 @@ function CategoryCarousel({ category }: CategoryCarouselProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="mt-4">
-                    <h3 className="text-lg font-serif font-medium text-[#2E2B28] group-hover:text-[#C46B43] transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-[#2E2B28]/70">
+                    <p className="text-sm text-[#2E2B28]/70">
                       {item.description}
                     </p>
                   </div>

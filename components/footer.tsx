@@ -9,7 +9,7 @@ export function Footer() {
             <div className="flex items-center mb-4">
               <img src="/logo/logo.png" alt="SMHD Interiors" className="h-12 w-auto mr-2" />
               <span className="text-2xl font-bold">
-                SMHD<span className="text-[#C46B43]">INTERIOR</span>
+                SMHD<span className="text-[#C46B43]">INTERIORS</span>
               </span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed max-w-md mb-4">
@@ -17,10 +17,7 @@ export function Footer() {
               expertise.
             </p>
             <div className="text-gray-600 text-sm space-y-3">
-              <p className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2 text-[#C46B43]" />
-                Serving all over India
-              </p>
+              
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 text-[#C46B43]" />
                 <div>
@@ -81,16 +78,17 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-gray-800">Contact Us</h3>
             <div className="space-y-3 text-sm text-gray-600">
-              <p className="flex items-center">
-                <Phone className="h-4 w-4 mr-2 text-[#C46B43]" />
-                <a href="tel:+919940322694" className="hover:text-[#C46B43] transition-colors duration-200" title="Call us">
+              <p>
+                <a href="tel:+919940322694" title="Call us" className="flex items-center hover:text-[#C46B43] transition-colors duration-200">
+                  <Phone className="h-4 w-4 mr-2 text-[#C46B43]" />
                   +91 99403 22694
                 </a>
               </p>
-              <p className="flex items-center">
-                <Mail className="h-4 w-4 mr-2 text-[#C46B43]" />
-                <a href="mailto:contact@smhdinterior.com" className="hover:text-[#C46B43] transition-colors duration-200">
-                  contact@smhdinterior.com
+
+              <p>
+                <a href="mailto:Karthiksmhd@gmail.com" className="flex items-center hover:text-[#C46B43] transition-colors duration-200">
+                  <Mail className="h-4 w-4 mr-2 text-[#C46B43]" />
+                  Karthiksmhd@gmail.com
                 </a>
               </p>
             </div>
@@ -98,30 +96,38 @@ export function Footer() {
             <div className="mt-6">
               <h4 className="font-medium mb-3 text-gray-800">Follow Us</h4>
               <div className="flex gap-4">
-                <a 
-                  href="https://www.instagram.com/smhdinteriors.9940" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/smhdinteriors.9940"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C46B43] hover:text-white transition-all duration-300"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-tr from-pink-500 via-yellow-400 to-purple-600 text-white transition-all duration-300 hover:scale-105"
                 >
-                  <Instagram className="h-6 w-6" />
+                  <Instagram className="h-5 w-5" />
                 </a>
-                <a 
-                  href="https://www.facebook.com/smhdinteriors" 
-                  target="_blank" 
+
+                <a
+                  href="https://www.facebook.com/smhdinteriors"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C46B43] hover:text-white transition-all duration-300"
+                  aria-label="Facebook"
+                  className="w-10 h-10 rounded-full flex items-center justify-center bg-[#1877F2] text-white transition-all duration-300 hover:scale-105"
                 >
-                  <Facebook className="h-6 w-6" />
+                  <Facebook className="h-5 w-5" />
                 </a>
+
                 <a
                   href="https://wa.me/919940322694"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C46B43] hover:text-white transition-all duration-300"
+                  aria-label="WhatsApp"
                   title="Chat on WhatsApp"
+                  className="w-10 h-10 rounded-full flex items-center justify-center bg-[#25D366] text-white transition-all duration-300 hover:scale-105"
                 >
-                  <MessageCircle className="h-6 w-6" />
+                  {/* Inline WhatsApp SVG (white, uses currentColor) */}
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M20.52 3.48A10 10 0 1 0 3.48 20.52L2 22l1.48-1.48A10 10 0 0 0 20.52 3.48zM12.01 19.5c-1.86 0-3.6-.5-5.12-1.36l-.37-.22-3.03.9.9-3.02-.24-.39A7.48 7.48 0 0 1 4.5 12.01c0-4.14 3.37-7.5 7.51-7.5 4.14 0 7.5 3.36 7.5 7.5 0 4.14-3.36 7.5-7.5 7.5zm3.94-5.21c-.21-.1-1.24-.61-1.43-.68-.19-.08-.33-.11-.47.11-.14.22-.54.68-.66.82-.12.14-.24.16-.45.06-.21-.09-.9-.33-1.71-1.05-.63-.57-1.05-1.27-1.17-1.48-.12-.21-.01-.33.09-.43.09-.09.21-.24.31-.36.1-.12.13-.21.2-.34.07-.13.03-.25-.02-.34-.05-.09-.46-1.11-.63-1.52-.17-.4-.34-.34-.47-.35l-.4-.01c-.13 0-.33.05-.5.22-.17.17-.66.64-.66 1.56 0 .92.68 1.82.78 1.95.1.13 1.43 2.22 3.88 3.86 2.66 1.78 3.02 1.31 3.56 1.23.37-.06 1.24-.5 1.42-.98.18-.48.18-.9.13-.98-.05-.08-.2-.13-.41-.22z" fill="currentColor" />
+                  </svg>
                 </a>
               </div>
             </div>

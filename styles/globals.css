@@ -165,3 +165,24 @@
     font-family: DIN, 'Aptos', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   }
 }
+
+/* Ensure anchored sections are not hidden under the fixed navbar on scroll/jump */
+:root {
+  --nav-height: 56px; /* default navbar height (adjust if your navbar height changes) */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nav-height: 56px; /* desktop navbar height */
+  }
+}
+
+/* When the browser scrolls to an anchor, keep space for the fixed navbar */
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
+/* For any element that may be targeted by an anchor (id), add extra scroll margin so content isn't covered */
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 0.75rem);
+}

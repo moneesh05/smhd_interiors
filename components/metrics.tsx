@@ -58,7 +58,7 @@ export default function Metrics() {
             >
               <div className="p-4 sm:p-6 bg-white/90 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
                 <div className="text-xl sm:text-3xl font-bold text-[#C46B43]">{r.value}</div>
-                <div className="mt-1 sm:mt-2 text-xs sm:text-base text-[#2E2B28]/80 truncate">{r.label}</div>
+                <div className="mt-1 sm:mt-2 text-xs sm:text-base text-[#2E2B28]/80 whitespace-normal break-words leading-snug">{r.label}</div>
               </div>
             </M.div>
           ))}
