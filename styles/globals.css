@@ -1,6 +1,37 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/*
+  Fonts: Aptos (body) and DIN (headings).
+  Two options:
+  1) If you add .woff2 files to /public/fonts, the @font-face rules below will load them automatically.
+     - Place files as: /public/fonts/Aptos-Regular.woff2 and /public/fonts/DIN-Regular.woff2 (and other weights as needed)
+  2) If you host these fonts elsewhere (Google Fonts or a CDN), remove or adjust the @font-face rules and import from the CDN.
+
+  Example file names for local fonts (place them in `public/fonts`):
+    - Aptos-Regular.woff2
+    - Aptos-Bold.woff2
+    - DIN-Regular.woff2
+    - DIN-Bold.woff2
+*/
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('/fonts/Aptos-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN';
+  src: url('/fonts/DIN-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -75,8 +106,9 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
+  --font-sans: 'Aptos', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-heading: 'DIN', 'Aptos', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -119,7 +151,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+  /* Set default body font to Aptos (falls back to system sans-serif if not available) */
   body {
     @apply bg-background text-foreground;
+    font-family: Aptos, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  }
+
+  /* Apply DIN to all headings globally so you don't need to change components */
+  h1, h2, h3, h4, h5, h6 {
+    /* Use Tailwind font utility to map to the `heading` font family we added to tailwind.config */
+    @apply font-heading;
+    /* Ensure fallback if font-heading is not available */
+    font-family: DIN, 'Aptos', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   }
 }

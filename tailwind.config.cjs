@@ -15,7 +15,12 @@ module.exports = {
         xl: '1280px',
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Aptos", "sans-serif"],
+        heading: ["DIN", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
